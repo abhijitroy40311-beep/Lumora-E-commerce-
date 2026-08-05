@@ -233,7 +233,7 @@ export default function ProductDetails() {
                 className="flex-1 h-14 bg-zinc-950 text-white rounded-full font-medium flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors disabled:opacity-50 shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
               >
                 {product.inStock ? (
-                  <>Add to Cart <span className="w-1 h-1 bg-white/30 rounded-full mx-1" /> {formatPrice(product.price * quantity)}</>
+                  <>Add to Cart <span className="w-1 h-1 bg-white/30 rounded-full mx-1 my-6" /> {formatPrice(product.price * quantity)}</>
                 ) : 'Out of Stock'}
               </button>
               

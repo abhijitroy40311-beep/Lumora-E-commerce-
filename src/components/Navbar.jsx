@@ -24,7 +24,9 @@ export default function Navbar() {
 
   // Close mobile menu on route change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileMenuOpen(false);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsProfileDropdownOpen(false);
   }, [location.pathname]);
 
@@ -65,12 +67,12 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex flex-1 justify-center space-x-8">
+            <nav className="hidden md:flex flex-1 justify-center space-x-6 pl-8 lg:space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-sm font-medium text-zinc-600 hover:text-zinc-950 transition-colors"
+                  className="text-sm font-medium text-zinc-600 hover:text-zinc-950 transition-colors whitespace-nowrap"
                 >
                   {link.name}
                 </Link>
@@ -128,7 +130,7 @@ export default function Navbar() {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <Link to="/login" className="text-sm font-medium text-zinc-900 hover:text-zinc-600 transition-colors px-2 sm:px-3 hidden sm:block">
+                  <Link to="/login" className="text-sm font-medium text-zinc-900 hover:text-zinc-600 transition-colors px-2 sm:px-3 hidden sm:block whitespace-nowrap">
                     Sign in
                   </Link>
                 )}
